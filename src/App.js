@@ -1,4 +1,5 @@
 import "./App.css";
+import StudentsList from "./components/StudentsList";
 
 function App() {
   // Data Types
@@ -95,7 +96,7 @@ function App() {
   //tolowercase
 
   const test = "ONOMATOPOIEA";
-  console.log(test.toLowerCase);
+  console.log(test.toLowerCase());
 
   // split
 
@@ -113,6 +114,8 @@ function App() {
       <h1>
         This is a React App named Classroom -cra for a javascript Assignment
       </h1>
+      <h2>Sanusi leave Tete , e go spoil your life</h2>
+      <StudentsList />
     </div>
   );
 }
