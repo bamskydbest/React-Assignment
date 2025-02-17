@@ -139,15 +139,10 @@ function App() {
     },
   ];
 
+  const [disappear, setDisappear] = useState(userList);
   // const filteredList = userList.filter((fill) => {
   //   return fill.userList > 18;
   // });
-  const handleClick = () => {
-    // alert("You have just clicked on a button!");
-    disappear += setDisappear;
-  };
-
-  const [disappear, setDisappear] = useState("No users available");
 
   return (
     <div>
@@ -157,7 +152,7 @@ function App() {
       <h2>Sanusi leave Tete , e go spoil your life</h2>
       <StudentsList />
       <StatusMessage status={status} />
-      <UserList userList={userList} handleClick={handleClick} />
+      <UserList userList={disappear} setDisappear={setDisappear} />
     </div>
   );
 }
