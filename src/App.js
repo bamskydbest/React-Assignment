@@ -1,5 +1,8 @@
+import { useState } from "react";
 import "./App.css";
+import StatusMessage from "./components/StatusMessage";
 import StudentsList from "./components/StudentsList";
+import UserList from "./components/UserList";
 
 function App() {
   // Data Types
@@ -109,6 +112,43 @@ function App() {
   console.log(newArray);
   console.log(newArray.length);
 
+  // const status = "success";
+  const status = "loading";
+  // const status = "error";
+
+  const userList = [
+    {
+      id: 1,
+      name: "Mahmoud Abdulmajeed Taiye",
+      age: 26,
+    },
+    {
+      id: 2,
+      name: "Sanusi Oyedeji Sanusi",
+      age: 29,
+    },
+    {
+      id: 3,
+      name: "Bakare Rukayat",
+      age: 27,
+    },
+    {
+      id: 4,
+      name: "Lawal Kolawole Wasiu",
+      age: 33,
+    },
+  ];
+
+  // const filteredList = userList.filter((fill) => {
+  //   return fill.userList > 18;
+  // });
+  const handleClick = () => {
+    // alert("You have just clicked on a button!");
+    disappear += setDisappear;
+  };
+
+  const [disappear, setDisappear] = useState("No users available");
+
   return (
     <div>
       <h1>
@@ -116,6 +156,8 @@ function App() {
       </h1>
       <h2>Sanusi leave Tete , e go spoil your life</h2>
       <StudentsList />
+      <StatusMessage status={status} />
+      <UserList userList={userList} handleClick={handleClick} />
     </div>
   );
 }
