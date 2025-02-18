@@ -7,3 +7,10 @@ h1 {
   color: #d17557;
   font-family: cursive;
 }
+.success {
+  font-size: 60px;
+  color: #0f0;
+}
+.error {
+  color: #f00;
+}

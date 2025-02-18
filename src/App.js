@@ -112,8 +112,8 @@ function App() {
   console.log(newArray);
   console.log(newArray.length);
 
-  // const status = "success";
-  const status = "loading";
+  const status = "success";
+  // const status = "loading";
   // const status = "error";
 
   const userList = [

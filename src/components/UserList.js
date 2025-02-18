@@ -14,7 +14,7 @@ const UserList = (prop) => {
           );
         })}
       </div>
-      <button onClick={prop.setDisappear([])}> Click To See</button>
+      <button onClick={() => prop.setDisappear([])}> Click To See</button>
       {/* <button>Click Me</button> */}
     </div>
   );
