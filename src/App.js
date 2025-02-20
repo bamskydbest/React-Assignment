@@ -3,6 +3,7 @@ import "./App.css";
 import StatusMessage from "./components/StatusMessage";
 import StudentsList from "./components/StudentsList";
 import UserList from "./components/UserList";
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
   // Data Types
@@ -153,6 +154,7 @@ function App() {
       <StudentsList />
       <StatusMessage status={status} />
       <UserList userList={disappear} setDisappear={setDisappear} />
+      <RegistrationForm />
     </div>
   );
 }

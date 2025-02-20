@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "name": "Mahmoud Abdulmajeed Taiye",
+      "email": "mahmoudabdulmajeedtaiye@gmail.com",
+      "password": "abdulmajeed",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "name": "Mahmoud Taiye",
+      "email": "mahmoudfigma@gmail.com",
+      "password": "youaremad",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "name": "Lawal Kolawole",
+      "email": "whytedude@gmail.com",
+      "password": "123",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "name": "Mahmoud Kehinde",
+      "email": "mahmoudkehinde@gmail.com",
+      "password": "234",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "name": "sanusi sanusi",
+      "email": "san@yahoo.com",
+      "password": "1234",
+      "gender": "male",
+      "id": 5
+    }
+  ]
+}
