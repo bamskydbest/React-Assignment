@@ -18,23 +18,50 @@ h1 {
 form {
   background-color: #f0f;
   padding: 20px;
+  margin: auto;
+  width: 50%;
 }
 input[type="text"] {
-  width: 50%;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
 }
 input[type="email"] {
-  width: 50%;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
 }
 input[type="password"] {
-  width: 43.5%;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
 }
+
 label {
   margin-right: 15px;
+  display: block;
+  margin: 10px;
 }
 .radio {
-  margin: auto;
+  margin: 10px;
 }
-button {
+.btn {
   display: block;
   margin: auto;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #f0f;
+}
+.radioo {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+.male {
+  margin-right: 20px;
+}
+p {
+  margin: 10px;
 }

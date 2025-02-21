@@ -31,10 +31,7 @@ const RegistrationForm = () => {
     };
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/students",
-        formData
-      );
+      await axios.post("http://localhost:3000/students", formData);
       setLoading(false);
       setName("");
       setEmail("");
@@ -101,7 +98,9 @@ const RegistrationForm = () => {
         <div>
           <p>Gender</p>
           <div className="radio">
-            <label htmlFor="male">Male:</label>
+            <label htmlFor="male" className="radioo">
+              Male:
+            </label>
             <input
               type="radio"
               name="gender"
@@ -110,9 +109,12 @@ const RegistrationForm = () => {
               checked={gender === "male"}
               required
               onChange={(e) => setGender(e.target.value)}
+              className="male"
             />
 
-            <label htmlFor="female">Female:</label>
+            <label htmlFor="female" className="radioo">
+              Female:
+            </label>
             <input
               type="radio"
               name="gender"
@@ -125,7 +127,9 @@ const RegistrationForm = () => {
           </div>
         </div>
 
-        <button type="submit">{loading ? "Submitting" : "Submit"}</button>
+        <button type="submit" className="btn">
+          {loading ? "Submitting" : "Submit"}
+        </button>
       </form>
     </div>
   );
