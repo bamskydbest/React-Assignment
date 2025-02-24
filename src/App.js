@@ -4,6 +4,7 @@ import StatusMessage from "./components/StatusMessage";
 import StudentsList from "./components/StudentsList";
 import UserList from "./components/UserList";
 import RegistrationForm from "./components/RegistrationForm";
+import UncontrolledRegistrationForm from "./components/UncontrolledRegistrationForm";
 
 function App() {
   // Data Types
@@ -155,7 +156,7 @@ function App() {
       <StatusMessage status={status} />
       <UserList userList={disappear} setDisappear={setDisappear} />
       <RegistrationForm />
-      {/* <RegistrationForm /> */}
+      <UncontrolledRegistrationForm />
     </div>
   );
 }
