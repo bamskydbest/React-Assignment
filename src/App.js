@@ -155,6 +155,7 @@ function App() {
       <StatusMessage status={status} />
       <UserList userList={disappear} setDisappear={setDisappear} />
       <RegistrationForm />
+      {/* <RegistrationForm /> */}
     </div>
   );
 }
