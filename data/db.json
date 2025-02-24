@@ -34,6 +34,43 @@
       "password": "1234",
       "gender": "male",
       "id": 5
+    },
+    {
+      "userName": "Bamsky dbest",
+      "userEmail": "bamskydbest@gmail.com",
+      "userPassword": "2345",
+      "userConfirmPassword": "2345",
+      "gender": "on",
+      "id": 6
+    },
+    {
+      "userName": "Bamsky dbest",
+      "userEmail": "bamskydbest@gmail.com",
+      "userPassword": "2345",
+      "userConfirmPassword": "2345",
+      "gender": "on",
+      "id": 7
+    },
+    {
+      "name": "Bamsky dbest",
+      "email": "bamskydbest@gmail.com",
+      "password": "2345",
+      "gender": "on",
+      "id": 8
+    },
+    {
+      "name": "Bamsky dbest",
+      "email": "bamskydbest@gmail.com",
+      "password": "2345",
+      "gender": "male",
+      "id": 9
+    },
+    {
+      "name": "Bamsky dbest",
+      "email": "bamskydbest@gmail.com",
+      "password": "2345",
+      "gender": "female",
+      "id": 10
     }
   ]
 }

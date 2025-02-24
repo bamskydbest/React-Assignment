@@ -5,6 +5,7 @@ import StudentsList from "./components/StudentsList";
 import UserList from "./components/UserList";
 import RegistrationForm from "./components/RegistrationForm";
 import UncontrolledRegistrationForm from "./components/UncontrolledRegistrationForm";
+import SearchFiltering from "./components/SearchFiltering";
 
 function App() {
   // Data Types
@@ -157,6 +158,7 @@ function App() {
       <UserList userList={disappear} setDisappear={setDisappear} />
       <RegistrationForm />
       <UncontrolledRegistrationForm />
+      <SearchFiltering />
     </div>
   );
 }
