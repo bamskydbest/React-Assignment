@@ -6,6 +6,7 @@ import UserList from "./components/UserList";
 import RegistrationForm from "./components/RegistrationForm";
 import UncontrolledRegistrationForm from "./components/UncontrolledRegistrationForm";
 import SearchFiltering from "./components/SearchFiltering";
+import Practice from "./components/Practice";
 
 function App() {
   // Data Types
@@ -159,6 +160,7 @@ function App() {
       <RegistrationForm />
       <UncontrolledRegistrationForm />
       <SearchFiltering />
+      <Practice />
     </div>
   );
 }
