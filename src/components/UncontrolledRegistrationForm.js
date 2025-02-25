@@ -31,8 +31,11 @@ const UncontrolledRegistrationForm = () => {
     try {
       const response = axios.post("http://localhost:3000/students", newObject);
       console.log(response);
+      alert("Form submission successful");
+      e.target.reset();
     } catch (error) {
       console.error(error);
+      alert("Form submission unsuccessful");
     }
   };
   return (

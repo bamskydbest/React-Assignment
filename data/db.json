@@ -71,6 +71,20 @@
       "password": "2345",
       "gender": "female",
       "id": 10
+    },
+    {
+      "name": "Mahmoud Aishat ",
+      "email": "mahmoudaishatmojirayo@gmail.com",
+      "password": "3232",
+      "gender": "female",
+      "id": 11
+    },
+    {
+      "name": "Bakare Rukayat",
+      "email": "r.molara1@gmail.com",
+      "password": "32324",
+      "gender": "female",
+      "id": 12
     }
   ]
 }
