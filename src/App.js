@@ -157,17 +157,18 @@ function App() {
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
-        const getUsers = setUserss(response.data);
-        console.log(getUsers);
+        setUserss(response.data);
+
         //filter users whose name does not contain "v,p,k"
-        // const filtredUsers = response.filter((user) => {
-        //   const name = userss.name.toLowerCase();
-        //   return (
-        //     !name.includes("v") && !name.includes("p") && !name.includes("k")
-        //   );
-        // });
+        const filtredUsers = response.data.filter((user) => {
+          const name = user.name.toLowerCase();
+          return (
+            !name.includes("v") && !name.includes("p") && !name.includes("k")
+          );
+        });
+        // console.log(filtredUsers);
         // 5 limit
-        setUserss(response.slice(0, 5));
+        setUserss(filtredUsers);
       } catch (error) {
         console.error(error);
       }
