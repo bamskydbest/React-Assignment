@@ -1,9 +1,9 @@
 const LoopsAndReactSideEfect = (prop) => {
-  // const sliced = userss.sliced(0,5);
+  const sliced = prop.userss.slice(0, 5);
 
   return (
     <div>
-      {prop.userss.map((userss) => {
+      {sliced.map((userss) => {
         return (
           <div className="extract" key={userss.id}>
             <h1 className="">Name : {userss.name}</h1>
