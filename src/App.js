@@ -9,6 +9,9 @@ import SearchFiltering from "./components/SearchFiltering";
 import Practice from "./components/Practice";
 import LoopsAndReactSideEfect from "./components/LoopsAndReactSideEfect";
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
 
 function App() {
   // Data Types
@@ -190,6 +193,11 @@ function App() {
       <SearchFiltering />
       <Practice />
       <LoopsAndReactSideEfect userss={userss} />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </div>
   );
 }
