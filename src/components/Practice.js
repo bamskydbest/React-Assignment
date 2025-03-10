@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 const Practice = () => {
@@ -7,9 +8,36 @@ const Practice = () => {
   const [confirmpassword, setConfirmPassword] = useState("");
   const [gender, setGender] = useState("");
 
-  const handleBtn = (e) => {
-    alert("you have clicked a button");
+  const handleBtn = async (e) => {
+    // alert("you have clicked a button");
     e.preventDefault();
+
+    if (password !== confirmpassword) {
+      alert("Password and Confirmpassword must match");
+      return;
+    }
+    if (!fullname || !email || !password || !confirmpassword || !gender) {
+      alert(
+        "You have to complete the form submission and fill out the empty fields!!"
+      );
+      return;
+    }
+
+    const data = {
+      fullname: fullname,
+      email: email,
+      password: password,
+      gender: gender,
+    };
+
+    try {
+      const response = await axios.post("http://localhost:3000/Practice", data);
+      console.log(response);
+      alert("Form submission with axios is successful!!!");
+    } catch (error) {
+      console.error(error);
+      alert("Form submission with axios is unsuccessful!!!!");
+    }
   };
   return (
     <div>
@@ -73,7 +101,7 @@ const Practice = () => {
               onChange={(e) => setGender(e.target.value)}
             />
 
-            <label htmlFor="female">Male</label>
+            <label htmlFor="female">Female</label>
             <input
               type="radio"
               name="gender"
