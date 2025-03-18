@@ -1,50 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changer } from "../redux/student/tasksSlice";
+import { addition, changer } from "../redux/student/tasksSlice";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   document.title = "Module 19 project";
-  const { name, height, age, course, religion } = useSelector(
+  const { name, height, age, course, religion, items } = useSelector(
     (store) => store.tasks
   );
+  const [namee, setNamee] = useState("");
+  const [description, setDiscription] = useState("");
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(changer("Bamsky_Dbest"));
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newItem = {
+      name: namee,
+      description: description,
+      id: items.length + 1,
+    };
+    dispatch(addition(newItem));
+  };
+  console.log(items);
 
-  const items = [
-    {
-      id: 1,
-      name: "Mahmoud Abdulmajeed Taiye",
-      description: "Black and Tall",
-    },
-    {
-      id: 2,
-      name: "Sanusi Oyedeji Sanusi",
-      description: "Black and Medium height",
-    },
-    {
-      id: 3,
-      name: "Bakare Rukayat Olaitan",
-      description: "Open Minded person ",
-    },
-    {
-      id: 4,
-      name: "Abayomi Abdulazeez Lekan",
-      description: "Tall and thin",
-    },
-    {
-      id: 5,
-      name: "Lawal Wasiu Kolawole",
-      description: "Light and promiscous ",
-    },
-    {
-      id: 6,
-      name: "Oyewale Feranmi",
-      description: "`Tall and a church guy` ",
-    },
-  ];
   return (
     <div>
       <h1> This page for home page</h1>
@@ -58,10 +38,31 @@ const Home = () => {
       </button>
 
       {items.map((item) => (
-        <div className="">
+        // key={item.id}
+        <div className="" key={item.id}>
           <Link to={`/details/${item.id}`}>{item.name}</Link>
         </div>
       ))}
+
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title"> Title : </label>
+        <input
+          type="text"
+          id="title"
+          value={namee}
+          onChange={(e) => setNamee(e.target.value)}
+        />
+
+        <label htmlFor="description"> Description : </label>
+        <input
+          type="text"
+          id="description"
+          value={description}
+          onChange={(e) => setDiscription(e.target.value)}
+        />
+
+        <button className="btn">Submit</button>
+      </form>
     </div>
   );
 };

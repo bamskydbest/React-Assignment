@@ -57,10 +57,15 @@ export const tasksSlice = createSlice({
 
       state.name = action.payload;
     },
+    addition: (state, action) => {
+      // state.items = action.payload.push();
+      state.items.push(action.payload);
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
 export const { changer } = tasksSlice.actions;
+export const { addition } = tasksSlice.actions;
 
 export default tasksSlice.reducer;
