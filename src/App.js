@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import StatusMessage from "./components/StatusMessage";
 import StudentsList from "./components/StudentsList";
@@ -7,6 +7,11 @@ import RegistrationForm from "./components/RegistrationForm";
 import UncontrolledRegistrationForm from "./components/UncontrolledRegistrationForm";
 import SearchFiltering from "./components/SearchFiltering";
 import Practice from "./components/Practice";
+import LoopsAndReactSideEfect from "./components/LoopsAndReactSideEfect";
+import axios from "axios";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
 
 function App() {
   // Data Types
@@ -147,6 +152,32 @@ function App() {
   // const filteredList = userList.filter((fill) => {
   //   return fill.userList > 18;
   // });
+  const [userss, setUserss] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        setUserss(response.data);
+
+        //filter users whose name does not contain "v,p,k"
+        const filtredUsers = response.data.filter((user) => {
+          const name = user.name.toLowerCase();
+          return (
+            !name.includes("v") && !name.includes("p") && !name.includes("k")
+          );
+        });
+        // console.log(filtredUsers);
+        // 5 limit
+        setUserss(filtredUsers);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -161,6 +192,12 @@ function App() {
       <UncontrolledRegistrationForm />
       <SearchFiltering />
       <Practice />
+      <LoopsAndReactSideEfect userss={userss} />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </div>
   );
 }
